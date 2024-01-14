@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+<link rel="stylesheet" href="style1.css">
+</head>
+<style>
+    
+    .actions {
+        margin-top: 200px ;
+        display: flex ;
+        flex-direction: row ;
+        background-color: rgb(255, 255, 255) ; 
+        height: 40px ;
+        justify-content: space-between; 
+        width: 600px ;
+        margin-left: 447px ;
+        
+
+
+    }
+
+    .actions button {
+        font-size: 20px ;
+        border-radius: 3px ;
+        font-family: Roboto , Arial ;
+        font-weight: 600;
+        color : rgb(0, 0, 0) ; 
+        box-shadow: inset 100px 1px rgba(91, 87, 87,0.3) ; 
+        transition: all 0.5s;
+        text-align: center;
+    }
+
+    .actions button:hover {
+        font-size: 22px ;
+        padding : 2px 2px 10px  ; 
+        background-color : rgb(97, 82, 62) ; 
+        color : rgb(0, 0, 0) ; 
+    }
+
+    .interface {
+        display: flex ;
+        flex-direction: column ;
+        margin-top: 150px ;
+        margin-left: 370px ;
+        width: 750px ;
+
+    }
+
+    .keyboard {
+        display: flex ;
+        flex-direction: row ;
+        background-color: rgb(112, 99, 99);
+
+    }
+    .keyboard .char button {
+        font-size: 35px ;
+        padding :10px ;
+        border-radius: 5px ;
+        
+    }
+    .keyboard .char button:hover  {
+        padding :10px ;
+        background-color: rgb(102, 82, 82);
+        color :white ; 
+    }
+
+
+
+    .keyboard .char {
+        display: grid ; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+       
+    }
+
+    .keyboard .numero {
+        margin-left: 10px ;
+        display: grid ;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        height: 100px;
+
+       
+    }
+
+    .keyboard .numero button {
+        font-size: 35px ;
+        padding :10px ;
+        height: 63.3px;
+        border-radius: 5px;
+
+    }
+
+     .keyboard .numero button:hover {
+        padding :10px ;
+        background-color: rgb(102, 82, 82);
+        color :white ; 
+
+
+    }
+
+    .affichage {
+        margin-bottom: 50px ;
+        border-radius: 5px ;
+        background-color: rgb(255, 255, 255) ;
+        height: 40px ;
+        font-size: 25px ;
+        font-family: Roboto , Arial ;
+        font-weight: 600 ;    
+    }
+
+</style>
+<body>
+    <body>
+    <div class="header">
+        <a href="mainPage.html">CALCULATRICE</a>
+        <a href="pageString.html">STRING CHANGE</a>
+        <a href="gamedev.html">BEST GAME SOON</a>
+    </div>
+    <div>
+        <div class="actions">
+            <button class="touppercase">UpperCase</button>
+            <button class="tolowercase">LowerCase</button>
+            <button class="deletenum">RemoveNum</button>
+            <button class="deleteLast">CLEAR</button>
+            <button class="clear" onclick="reset()">CLEAR ALL</button>
+        </div>
+        <div class="interface">
+            <input class="affichage">
+            <div class="keyboard">
+                <div class="char">
+                    <button onclick="addchar('a')" class="btn">A</button>
+                    <button onclick="addchar('z')" class="btn">Z</button>
+                    <button onclick="addchar('e')" class="btn">E</button>
+                    <button onclick="addchar('r')" class="btn">R</button>
+                    <button onclick="addchar('t')" class="btn">T</button>
+                    <button onclick="addchar('y')" class="btn">Y</button>
+                    <button onclick="addchar('u')" class="btn">U</button>
+                    <button onclick="addchar('i')" class="btn">I</button>
+                    <button onclick="addchar('o')" class="btn">O</button>
+                    <button onclick="addchar('p')" class="btn">P</button>
+                    <button onclick="addchar('q')" class="btn">Q</button>
+                    <button onclick="addchar('s')" class="btn">S</button>
+                    <button onclick="addchar('d')" class="btn">D</button>
+                    <button onclick="addchar('f')" class="btn">F</button>
+                    <button onclick="addchar('g')" class="btn">G</button>
+                    <button onclick="addchar('h')" class="btn">H</button>
+                    <button onclick="addchar('j')" class="btn">J</button>
+                    <button onclick="addchar('k')" class="btn">K</button>
+                    <button onclick="addchar('l')" class="btn">L</button>
+                    <button onclick="addchar('m')" class="btn">M</button>
+                    <button onclick="addchar('w')" class="btn">W</button>
+                    <button onclick="addchar('x')" class="btn">X</button>
+                    <button onclick="addchar('c')" class="btn">C</button>
+                    <button onclick="addchar('v')" class="btn">V</button>
+                    <button onclick="addchar('b')" class="btn">B</button>
+                    <button onclick="addchar('n')" class="btn">N</button>
+                    <button onclick="addchar('?')" class="btn">?</button>
+                    <button onclick="addchar('.')" class="btn">.</button>
+                    <button onclick="addchar('!')" class="btn">!</button>
+                    <button onclick="addchar('@')" class="btn">@</button>
+                    
+                </div>
+                
+                <div class="numero">
+                    <button onclick="addchar('0')" class="btn">0</button>
+                    <button onclick="addchar('1')" class="btn">1</button>
+                    <button onclick="addchar('2')" class="btn">2</button>
+                    <button onclick="addchar('3')" class="btn">3</button>
+                    <button onclick="addchar('4')" class="btn">4</button>
+                    <button onclick="addchar('5')" class="btn">5</button>
+                    <button onclick="addchar('6')" class="btn">6</button>
+                    <button onclick="addchar('7')" class="btn">7</button>
+                    <button onclick="addchar('8')" class="btn">8</button>
+                    <button onclick="addchar('9')" class="btn">9</button>
+                    <button onclick="addchar('*')" class="btn">*</button>
+                    <button onclick="addchar('/')" class="btn">/</button>
+
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <p class="copyright"> <i class='bx bxs-copyright'></i>CREATED BY YESSINE & AMINE </p>
+    
+
+
+</body>
+<script>
+    let input = "" ;
+    let afficheur = document.querySelector(".affichage") ;
+    let removebtn = document.querySelector(".deletenum") ; 
+    let lowerbtn = document.querySelector(".tolowercase") ;
+    let upperbtn = document.querySelector(".touppercase") ;
+    let deletebtn = document.querySelector(".deleteLast") ;
+    
+    document.body.addEventListener("keypress",function(e) {
+        afficheur.focus() ; 
+    });
+    
+    
+    function addchar(x) {
+        input+=x ; 
+        refresh() ; 
+
+    }
+
+
+    function refresh() {
+        afficheur.value = input ;
+    }
+
+    function reset() {
+        afficheur.value = "" ; 
+        input = "" ; 
+
+    }
+
+      
+
+
+
+
+    
+    removebtn.addEventListener("click", function() {
+        let chaine = afficheur.value ; 
+        let abc = chaine.split("").filter(function(e) {
+            console.log(e) ; 
+            return isNaN(parseInt(e)) ;
+
+        }).join("") ;  
+
+        afficheur.value= abc ;
+        input = abc ;  
+    }
+    );
+
+    lowerbtn.addEventListener("click",function() {
+        let chaine = afficheur.value ; 
+        let result = chaine.split("").map(function(e) {
+            return e===e.toLowerCase() ? e : e.toLowerCase() ; 
+            
+        }).join("") ; 
+
+        afficheur.value = result ;
+        input = result ;  
+    });
+
+    upperbtn.addEventListener("click",function() {
+        let chaine = afficheur.value ; 
+        let result = chaine.split("").map(function(e) {
+            return e===e.toUpperCase() ? e : e.toUpperCase() ; 
+        }).join("") ; 
+
+        afficheur.value = result ;
+        input = result ;  
+        
+    });
+
+    function delete1(String)  {
+        let x = String.split("") ;
+        x.pop() ; 
+        
+        afficheur.value = x.join("") ;
+        console.log(afficheur.value +"heelo")  ; 
+        console.log(x) ; 
+
+    }
+    console.log(deletebtn) ; 
+    deletebtn.addEventListener("click",function() {
+        let x = (afficheur.value).split("") ; 
+        x.pop() ; 
+        afficheur.value = x.join("") ; 
+        input = afficheur.value ; 
+    }) ; 
+
+
+
+
+    
+
+
+
+
+</script>
+</html>

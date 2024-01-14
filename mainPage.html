@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+<link rel="stylesheet" href="style1.css">
+<title>Document</title>
+</head>
+<style>
+    .interface {
+        margin-top: 200px ;
+        margin-left: 525px ;
+        margin-bottom: 200px ;
+        width: 400px ;
+        height: 400px ;
+        background-color: rgb(84, 64, 38);
+        border-radius: 5px ;
+
+    }
+    .buttons {
+        display: grid ;
+        grid-template-columns: 1fr 1fr 1fr ;
+        margin-top: 25px ;
+
+
+    }
+
+
+    .buttons button {
+        color : rgb(0, 0, 0) ; 
+        border-radius: 10px ;
+        margin: 3px ;
+        font-weight: 500;
+        font-size: 23px ;
+        transition: all 0.2s ;
+        height: 30px;
+        box-shadow: inset 50px 1px rgba(91, 87, 87,0.5)
+
+        
+    }
+    .aff1 {
+        display: flex ;
+        flex-direction: row ;
+        align-items: center;
+        justify-content: center ;
+
+    }
+
+    .aff2 {
+        border-radius :5px  ;
+        border: 2px solid rgb(0, 0, 0);
+        height: 50px ;
+        margin-top: 12px ;
+        font-family: Roboto ,Arial;
+        font-size: 20px;
+        border-radius : 10px  ;
+        box-shadow: inset 250px 2px rgb(88, 85, 85,0.5) ;
+
+
+    }
+
+
+
+
+    .buttons button:hover {
+        box-shadow: inset rgb(236, 236, 236) ;
+        color : rgb(255, 255, 255) ; 
+        font-size: 20px ;
+        background-color: rgb(25, 185, 221) ;
+
+
+    }
+
+
+    .troll {
+        font-size: 20px ;
+        margin-top: 150px ;
+        background-color: aqua ;
+        width: fit-content;
+        color :rgb(208, 29, 29) ;
+        height: fit-content; 
+    } 
+</style>
+<body>
+    <div class="header">
+        <a href="mainPage.html">CALCULATRICE</a>
+        <a href="pageString.html">STRING CHANGE</a>
+        <a href="gamedev.html">BEST GAME SOON</a>
+    </div>
+
+
+    <p class="copyright"> <i class='bx bxs-copyright'></i>CREATED BY YESSINE & AMINE</p>
+    <div class="interface">
+        <div class="calc">
+            <div class="aff1">
+                <input class="aff2">
+            </div>
+            <div class="buttons">
+                <button class="1"  onclick="addinput('1')">1</button>
+                <button class="2"  onclick="addinput('2')">2</button>
+                <button class="3" onclick="addinput('3')">3</button>
+                <button class="4" onclick="addinput('4')">4</button>
+                <button class="5" onclick="addinput('5')">5</button>
+                <button class="6" onclick="addinput('6')">6</button>
+                <button class="7"onclick="addinput('7')">7</button>
+                <button class="8" onclick="addinput('8')">8</button>
+                <button class="9" onclick="addinput('9')">9</button>
+                <button class="mois"onclick="addinput('-')">-</button>
+                <button class="plus"onclick="addinput('+')">+</button>
+                <button class="sur"onclick="addinput('/')">/</button>
+                <button class="egal"onclick="result()">=</button>
+                <button class="effacer" onclick="effarcer()">C</button>
+                <button class="effacer" onclick="addinput('.')">.</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    let input = document.querySelector(".aff2") ;   
+    document.body.addEventListener("keypress",function(e) {
+        input.focus() ; 
+    })
+    let typing = "" ;
+    
+    
+    function addinput(x) {
+        typing +=x ; 
+        refresh() ;
+    }
+
+    function refresh() {
+        input.value = typing ; 
+
+    }
+
+    function result() {
+        input.value = eval(input.value) ; 
+               
+      
+
+    }
+
+    function effarcer() {
+        input.value = "" ;
+        typing = "" ;  
+    }
+
+
+
+
+
+</script>
+</html>

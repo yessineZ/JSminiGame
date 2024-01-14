@@ -1,0 +1,120 @@
+
+    span,.score1 {
+        color : rgb(9, 255, 5) ; 
+        font-family: Roboto , Arial ;
+        font-size: 35px ;
+
+    }
+  
+    .all {
+        display: grid ;
+        grid-template-columns: 1fr  2fr 1fr ;
+        height: 600px ;
+        margin-top: -80px;
+    }
+
+    .score-interface {
+        margin-top: 200px ;
+        margin-left: 110px ;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .piwpiw {
+        height: 500px ;
+        width: 700px ;
+      
+        display: grid ;
+        background-color: rgb(84, 64, 38);
+        grid-template-columns: 1fr 1fr 1fr ;
+        border-radius: 50px ;
+        margin-top: 45px ;
+        margin-left: -20px;
+        
+
+    }
+
+    .piwpiw div {
+        margin-left: 35px ;
+    }
+    .game-interface  {
+        display: flex ;
+        align-items: center;
+        justify-content: center ;
+        flex-direction: column;
+    }
+
+    img {
+        width: 150px ;
+        height: 150px ;
+        position: absolute ;
+    }
+    .score1 {
+        color : rgb(0, 255, 0) ;
+        font-size: 35px ;
+        margin-left: 5px ;
+    }
+    .name {
+        display: flex;
+        flex-direction: column;
+        margin-top: 140px  ;
+        margin-left: 30px ;
+    }
+
+    .noti {
+        margin-top: 100px ;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center ;
+
+    }
+
+    .correctornot {
+        font-size: 25px ;
+        font-family: Roboto , Arial ;
+    }
+
+    .playagain {
+        position: fixed ;
+        right: 40px;
+        font-size: 30px;
+        border-radius: 30px;
+        background-color: rgb(38, 171, 58);
+        color : bisque ; 
+
+    }
+
+    .playagain:hover {
+        background-color: rgb(84, 64, 38);
+    }
+    .startgame {
+        position: fixed ;
+        right: 230px;
+        font-size: 30px;
+        border-radius: 30px;
+        background-color: rgb(51, 152, 66);
+        color : bisque ; 
+
+    }
+
+    .startgame:hover {
+        background-color: rgb(84, 64, 38);
+    }
+
+
+    .score-interface {
+        margin-top: 130px ;
+    }
+
+
+    .name-interface {
+        font-size: 28px;
+        margin-right: 10px;
+        color : black ;
+    }
+
+    h1 {
+        color : black ; 
+    }
